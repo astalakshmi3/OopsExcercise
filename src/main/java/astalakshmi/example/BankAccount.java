@@ -29,5 +29,9 @@ public class BankAccount {
     public double getBalance() {
         return balance;
     }
+    public void getBankAcountInfo(){
+        System.out.println("Account Holder: " + getAccountNumber() + ", Balance: " + getBalance());
+
+    }
 }
 
