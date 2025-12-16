@@ -38,4 +38,4 @@
 ### Product and Order List Management System
 ### Class Diagram
 
-![Product and Order list Diagram.png](Product%20and%20Order%20list%20Diagram.png)
+![Product and Order Diagram.jpg](src/main/java/astalakshmi/example/Product%20and%20Order%20Diagram.jpg)
