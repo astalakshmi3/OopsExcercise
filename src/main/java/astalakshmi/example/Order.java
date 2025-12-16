@@ -1,9 +1,9 @@
 package astalakshmi.example;
 import java.util.ArrayList;
 public class Order {
-private int orderId;
-private ArrayList <Product> ProductList;
-private double orderTotal;
+    private int orderId;
+    private ArrayList<Product> ProductList;
+    private double orderTotal;
 
     public int getOrderId() {
         return orderId;
@@ -17,21 +17,40 @@ private double orderTotal;
         return orderTotal;
     }
 
-    public Order(int orderId) {
-        this.orderId = orderId;
-        this.orderTotal = 0.0;
-    }
     public Order(int orderId, ArrayList<Product> productList) {
         this.orderId = orderId;
         this.ProductList = productList;
-        this.orderTotal = calculateOrderTotal();
+        // this.orderTotal = calculateOrderTotal();
     }
 
-    private double calculateOrderTotal() {
-        double total = 0.0;
-        for (Product product : ProductList) {
-            total += product.getProductPrice();
+    public void addProduct(Product p) {
+        ProductList.add(p);
+        orderTotal += p.getProductPrice();
+
+    }
+
+    public void removeProduct(Product p) {
+        if (ProductList.remove(p)) {
+            orderTotal -= p.getProductPrice();
+        } else {
+            System.out.println("Product not found in the order.");
         }
+    }
+
+    public double calculateOrderTotal() {
+        double total = 0;
+        for (Product p : ProductList) {
+            total += p.getProductPrice();
+        }
+
         return total;
+    }
+
+    public void getOrderInfo() {
+        System.out.println("Order ID: " + getOrderId() + ", Total: " + getOrderTotal());
+        System.out.println("Products in the order:");
+        for (Product p : ProductList) {
+            p.getProductInfo();
+        }
     }
 }

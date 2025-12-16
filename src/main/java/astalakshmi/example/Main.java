@@ -1,5 +1,7 @@
 package astalakshmi.example;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main() {
       /*  BankAccount acc1 = new BankAccount("Asta", 5000);
@@ -34,6 +36,18 @@ student3.getStudentInfo();
         product1.getProductInfo();
         product2.getProductInfo();
         product3.getProductInfo();
+Order order1 = new Order(201, new ArrayList<Product>());
+Order order2 = new Order(202, new ArrayList<Product>());
+Order order3 = new Order(203, new ArrayList<Product>());
+order1.addProduct(product1);
+order1.addProduct(product2);
+order1.getOrderInfo();
+order2.addProduct(product2);
+order2.addProduct(product3);
+order2.getOrderInfo();
+order3.addProduct(product1);
+order3.addProduct(product3);
+order3.getOrderInfo();
 
         }
     }
