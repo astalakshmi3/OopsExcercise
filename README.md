@@ -38,4 +38,4 @@
 ### Product and Order List Management System
 ### Class Diagram
 
-![Product and Order Diagram.jpg](target/classes/Product%20and%20Order%20Diagram.jpg)
+![Product and Order class Diagram.jpg](Product%20and%20Order%20class%20Diagram.jpg)
